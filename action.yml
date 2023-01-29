@@ -1,0 +1,13 @@
+name: "Sync fork's Repository"
+description: "Sync fork's repository"
+author: "fxcl"
+inputs:
+  REPOSITORY:
+    description: "The Sync fork's repository"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/sync-fork.sh
+      shell: bash
